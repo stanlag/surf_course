@@ -1,0 +1,4 @@
+#Thu Nov 09 08:50:52 MSK 2023
+base.0=/Users/macbookairm1/Desktop/task_8_gesturemaster/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
