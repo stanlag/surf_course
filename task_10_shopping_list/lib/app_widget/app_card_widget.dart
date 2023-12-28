@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../const/const.dart';
+import '../assets/colors/color_palette.dart';
+import '../assets/res /images.dart';
 
 // Карточки для списков товаров
 class AppCardWidget extends StatelessWidget {

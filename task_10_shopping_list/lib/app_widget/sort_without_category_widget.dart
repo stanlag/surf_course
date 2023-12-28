@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../entity/classes.dart';
+import '../entity/product_entity.dart';
 import '../model_provider/model_provider.dart';
 import 'app_card_widget.dart';
 

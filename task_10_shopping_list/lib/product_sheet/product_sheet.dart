@@ -1,4 +1,5 @@
-import '../entity/classes.dart';
+import '../entity/category.dart';
+import '../entity/product_entity.dart';
 
 /// Список продуктов.
 ///

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../const/const.dart';
-
 // тут виджет с отображением цен и скидок на экране
 class PriceWidget extends StatelessWidget {
   final String itemCountText;

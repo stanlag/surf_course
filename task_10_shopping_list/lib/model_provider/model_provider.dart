@@ -1,13 +1,14 @@
 
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import '../entity/classes.dart';
+import '../entity/product_entity.dart';
+import '../entity/sorting_selection.dart';
 import '../product_sheet/product_sheet.dart';
 
 // тут расчеты и сортировки
 class ModelProvider extends ChangeNotifier {
 
-  var selectedOption = SortingSelection.noSorting.name;
+  var selectedOption = SortingSelection.noSorting;
   var products = dataForStudents;
   var productsByCategory ={};
 
@@ -31,25 +32,25 @@ class ModelProvider extends ChangeNotifier {
 
 
 void sort() {
-    if (selectedOption == SortingSelection.noSorting.name) {
+    if (selectedOption == SortingSelection.noSorting) {
       products = dataForStudents;
     }
-    else if (selectedOption == SortingSelection.byNameFromAToZ.name) {
+    else if (selectedOption == SortingSelection.byNameFromAToZ) {
       products.sort((a, b) => a.title.compareTo(b.title));
     }
-    else if (selectedOption == SortingSelection.byNameFromZToA.name) {
+    else if (selectedOption == SortingSelection.byNameFromZToA) {
       products.sort((a, b) => b.title.compareTo(a.title));
     }
-    else if (selectedOption == SortingSelection.ascending.name) {
+    else if (selectedOption == SortingSelection.ascending) {
       products.sort((a, b) => a.price.compareTo(b.price));
     }
-    else if (selectedOption == SortingSelection.descending.name) {
+    else if (selectedOption == SortingSelection.descending) {
       products.sort((a, b) => b.price.compareTo(a.price));
     }
-    else if (selectedOption == SortingSelection.byTypeFromAToZ.name) {
+    else if (selectedOption == SortingSelection.byTypeFromAToZ) {
       productsByCategory = productsByCategorySort(true);
     }
-    else if (selectedOption == SortingSelection.byTypeFromZToA.name) {
+    else if (selectedOption == SortingSelection.byTypeFromZToA) {
       productsByCategory = productsByCategorySort(false);
     }
 

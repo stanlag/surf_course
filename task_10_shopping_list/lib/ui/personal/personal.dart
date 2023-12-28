@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:task_10_shopping_list/const/const.dart';
 import '../../app_widget/price_widget.dart';
 import '../../app_widget/sort_category_widget.dart';
 import '../../app_widget/sort_without_category_widget.dart';
-import '../../entity/classes.dart';
+import '../../assets/colors/color_palette.dart';
+import '../../entity/product_entity.dart';
+import '../../entity/sorting_selection.dart';
 import '../../model_provider/model_provider.dart';
 import 'package:bottom_sheet/bottom_sheet.dart';
 import '../../app_widget/build_bottom_sheet_widget.dart';
@@ -60,8 +61,8 @@ class Personal extends StatelessWidget {
               ],
             ),
           ),
-          model.selectedOption == SortingSelection.byTypeFromAToZ.name||
-          model.selectedOption == SortingSelection.byTypeFromZToA.name
+          model.selectedOption == SortingSelection.byTypeFromAToZ||
+          model.selectedOption == SortingSelection.byTypeFromZToA
               ? SortCategoryWidget(model: model)
               : SortWithoutCategoryWidget(model: model),
           const Divider(thickness: 0.5),

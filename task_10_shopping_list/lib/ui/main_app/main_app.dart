@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../const/const.dart';
+import '../../assets/colors/color_palette.dart';
 import '../personal/personal.dart';
 
 class MainApp extends StatefulWidget {
@@ -43,16 +43,14 @@ class _MainAppState extends State<MainApp> {
         decoration: const BoxDecoration(
           border: Border(
             top: BorderSide(
-              color: AppColor.lightGrey, // Цвет линии
+               color: AppColor.lightGrey, // Цвет линии
               width: 1.0, // Ширина линии
             ),
           ),
         ),
         child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.white,
-          showUnselectedLabels: true,
-          unselectedItemColor: AppColor.darkGrey,
+           type: BottomNavigationBarType.fixed,
+           unselectedItemColor: AppColor.darkGrey,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.article_outlined),
@@ -72,7 +70,6 @@ class _MainAppState extends State<MainApp> {
             ),
           ],
           currentIndex: selectedIndex,
-          selectedItemColor: AppColor.lightGreen,
           onTap: onItemTapped,
         ),
       ),
