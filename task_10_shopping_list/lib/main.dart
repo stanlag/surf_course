@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_10_shopping_list/model_provider/model_provider.dart';
 import 'package:task_10_shopping_list/ui/main_app/main_app.dart';
-
 import 'assets/themes/theme_data.dart';
 
 void main() {

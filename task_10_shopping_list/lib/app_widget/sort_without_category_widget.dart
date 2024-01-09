@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
-import '../entity/product_entity.dart';
-import '../model_provider/model_provider.dart';
+import 'package:task_10_shopping_list/entity/product_entity.dart';
 import 'app_card_widget.dart';
 
 // Тут виджет для сортировки товаров не по группам
 class SortWithoutCategoryWidget extends StatelessWidget {
   const SortWithoutCategoryWidget({
     super.key,
-    required this.model,
+    required this.products,
   });
-  final ModelProvider model;
+
+  final List<ProductEntity> products;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: model.products.length,
+        itemCount: products.length,
         itemBuilder: (BuildContext context, int index) {
           return AppCardWidget(
-            imageURL: model.products[index].imageUrl,
-            title: model.products[index].title,
-            quantityText: (model.products[index].amount is Grams)
-                ? '${(model.products[index].amount.value / 1000)} кг'
-                : '${model.products[index].amount.value} шт',
-            priceText: (model.products[index].price / 100),
-            sale: model.products[index].sale,
+            imageURL: products[index].imageUrl,
+            title: products[index].title,
+            quantityText: (products[index].amount is Grams)
+                ? '${(products[index].amount.value / 1000)} кг'
+                : '${products[index].amount.value} шт',
+            priceText: (products[index].price / 100),
+            sale: products[index].sale,
           );
         },
       ),

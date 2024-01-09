@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../assets/colors/color_palette.dart';
-import '../personal/personal.dart';
+import 'package:task_10_shopping_list/assets/colors/color_palette.dart';
+import 'package:task_10_shopping_list/ui/personal/personal.dart';
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -32,8 +31,9 @@ class _MainAppState extends State<MainApp> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Чек № 56', style:Theme.of(context).textTheme.titleLarge),
-            Text('24.02.23 в 12:23', style:Theme.of(context).textTheme.bodySmall),
+            Text('Чек № 56', style: Theme.of(context).textTheme.titleLarge),
+            Text('24.02.23 в 12:23',
+                style: Theme.of(context).textTheme.bodySmall),
           ],
         ),
         centerTitle: true,
@@ -43,14 +43,14 @@ class _MainAppState extends State<MainApp> {
         decoration: const BoxDecoration(
           border: Border(
             top: BorderSide(
-               color: AppColor.lightGrey, // Цвет линии
+              color: AppColor.lightGrey, // Цвет линии
               width: 1.0, // Ширина линии
             ),
           ),
         ),
         child: BottomNavigationBar(
-           type: BottomNavigationBarType.fixed,
-           unselectedItemColor: AppColor.darkGrey,
+          type: BottomNavigationBarType.fixed,
+          unselectedItemColor: AppColor.darkGrey,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.article_outlined),

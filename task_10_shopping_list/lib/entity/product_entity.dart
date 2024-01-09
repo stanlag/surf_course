@@ -1,6 +1,6 @@
 
 import 'category.dart';
-
+/// тест
 class ProductEntity {
   final String title;
   final int price;
@@ -38,7 +38,6 @@ class Quantity implements Amount {
   final int value;
   Quantity(this.value);
 }
-//TODO(stanlag): вынес  ProductEntity и все классы  в отдельные файлы
 /// Категория товара.
 
 

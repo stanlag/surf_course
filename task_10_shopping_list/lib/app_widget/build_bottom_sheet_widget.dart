@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_10_shopping_list/model_provider/model_provider.dart';
-import '../assets/colors/color_palette.dart';
-import '../entity/sorting_selection.dart';
+import 'package:task_10_shopping_list/assets/colors/color_palette.dart';
+import 'package:task_10_shopping_list/entity/sorting_selection.dart';
 
 class BuildBottomSheetWidget extends StatefulWidget {
   const BuildBottomSheetWidget({
@@ -49,12 +49,10 @@ class _BuildBottomSheetWidgetState extends State<BuildBottomSheetWidget> {
           ),
           const SizedBox(height: 20),
           RadioListTile(
-            title: const Text('Без сортировки'),
-            value: SortingSelection.noSorting,
-            groupValue: widget.model.selectedOption,
-            onChanged: onChanged
-
-          ),
+              title: const Text('Без сортировки'),
+              value: SortingSelection.noSorting,
+              groupValue: widget.model.selectedOption,
+              onChanged: onChanged),
           const Divider(),
           const SizedBox(height: 5),
           Align(
@@ -82,13 +80,13 @@ class _BuildBottomSheetWidgetState extends State<BuildBottomSheetWidget> {
                 Text('По цене', style: Theme.of(context).textTheme.bodyMedium),
           ),
           RadioListTile(
-            title: Text('По возрастанию'),
+            title: const Text('По возрастанию'),
             value: SortingSelection.ascending,
             groupValue: widget.model.selectedOption,
             onChanged: onChanged,
           ),
           RadioListTile(
-            title: Text('По убыванию'),
+            title: const Text('По убыванию'),
             value: SortingSelection.descending,
             groupValue: widget.model.selectedOption,
             onChanged: onChanged,
@@ -101,13 +99,13 @@ class _BuildBottomSheetWidgetState extends State<BuildBottomSheetWidget> {
                 Text('По типу', style: Theme.of(context).textTheme.bodyMedium),
           ),
           RadioListTile(
-            title: Text('По типу от А до Я'),
+            title: const Text('По типу от А до Я'),
             value: SortingSelection.byTypeFromAToZ,
             groupValue: widget.model.selectedOption,
             onChanged: onChanged,
           ),
           RadioListTile(
-            title: Text('По типу от Я до А'),
+            title: const Text('По типу от Я до А'),
             value: SortingSelection.byTypeFromZToA,
             groupValue: widget.model.selectedOption,
             onChanged: onChanged,
@@ -138,5 +136,3 @@ class _BuildBottomSheetWidgetState extends State<BuildBottomSheetWidget> {
     );
   }
 }
-// Todo(Stanlag): удалил CustomRadioListTile смену активноего цвета реализовал через тему приложения
-

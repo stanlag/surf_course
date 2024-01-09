@@ -23,8 +23,8 @@ class PriceWidget extends StatelessWidget {
       children: [
         Align(
           alignment: Alignment.topLeft,
-          child:
-              Text('В вашей покупке', style:Theme.of(context).textTheme.titleLarge),
+          child: Text('В вашей покупке',
+              style: Theme.of(context).textTheme.titleLarge),
         ),
         const SizedBox(
           height: 5,
@@ -43,7 +43,8 @@ class PriceWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(discountText, style: Theme.of(context).textTheme.bodyMedium),
-            Text(discountAmountText, style: Theme.of(context).textTheme.titleSmall),
+            Text(discountAmountText,
+                style: Theme.of(context).textTheme.titleSmall),
           ],
         ),
         const SizedBox(
@@ -53,7 +54,8 @@ class PriceWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Итого', style: Theme.of(context).textTheme.titleMedium),
-            Text(totalAmountText, style: Theme.of(context).textTheme.titleMedium),
+            Text(totalAmountText,
+                style: Theme.of(context).textTheme.titleMedium),
           ],
         ),
       ],

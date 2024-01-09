@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../app_widget/price_widget.dart';
-import '../../app_widget/sort_category_widget.dart';
-import '../../app_widget/sort_without_category_widget.dart';
-import '../../assets/colors/color_palette.dart';
-import '../../entity/product_entity.dart';
-import '../../entity/sorting_selection.dart';
-import '../../model_provider/model_provider.dart';
+import 'package:task_10_shopping_list/entity/sorted_products.dart';
+import 'package:task_10_shopping_list/app_widget/price_widget.dart';
+import 'package:task_10_shopping_list/app_widget/sort_category_widget.dart';
+import 'package:task_10_shopping_list/app_widget/sort_without_category_widget.dart';
+import 'package:task_10_shopping_list/assets/colors/color_palette.dart';
+import 'package:task_10_shopping_list/model_provider/model_provider.dart';
 import 'package:bottom_sheet/bottom_sheet.dart';
-import '../../app_widget/build_bottom_sheet_widget.dart';
+import 'package:task_10_shopping_list/app_widget/build_bottom_sheet_widget.dart';
 
 // Страница с чеком
 class Personal extends StatelessWidget {
@@ -61,16 +60,19 @@ class Personal extends StatelessWidget {
               ],
             ),
           ),
-          model.selectedOption == SortingSelection.byTypeFromAToZ||
-          model.selectedOption == SortingSelection.byTypeFromZToA
-              ? SortCategoryWidget(model: model)
-              : SortWithoutCategoryWidget(model: model),
+          switch (model.products){
+
+            // TODO: Handle this case.
+            ProductsWithoutCategory(data: final data) => SortWithoutCategoryWidget(products: data),
+            // TODO: Handle this case.
+            ProductsWithCategory(productsByCategoryMap: final data) => SortCategoryWidget(products: data),
+          },
           const Divider(thickness: 0.5),
           const SizedBox(
             height: 5,
           ),
           PriceWidget(
-            itemCountText: '${model.products.length} товаров',
+            itemCountText: '${model.products.data.length} товаров',
             totalPriceText: '${model.totalPriceText / 100} руб',
             discountText: model.discountText < 1
                 ? 'Скидка меньше 1 %'

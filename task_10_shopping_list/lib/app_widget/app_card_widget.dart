@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../assets/colors/color_palette.dart';
-import '../assets/res /images.dart';
+import 'package:task_10_shopping_list/assets/colors/color_palette.dart';
+import 'package:task_10_shopping_list/assets/res%20/images.dart';
 
 // Карточки для списков товаров
 class AppCardWidget extends StatelessWidget {
@@ -43,9 +43,7 @@ class AppCardWidget extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    title,
-                    style:Theme.of(context).textTheme.bodyMedium),
+                  Text(title, style: Theme.of(context).textTheme.bodyMedium),
                   const SizedBox(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,21 +53,28 @@ class AppCardWidget extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       sale == 0
-                          ? Text(
-                              priceText.toString(),
-                              style:Theme.of(context).textTheme.bodySmall
-                            )
+                          ? Text(priceText.toString(),
+                              style: Theme.of(context).textTheme.bodySmall)
                           : Row(
                               children: [
                                 Text(
                                   priceText.toString(),
-                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey, decoration: TextDecoration.lineThrough,),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(
+                                        color: Colors.grey,
+                                        decoration: TextDecoration.lineThrough,
+                                      ),
                                 ),
                                 const SizedBox(width: 20),
                                 Text(
                                   (priceText - (priceText * (sale / 100)))
                                       .toString(),
-                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColor.red),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(color: AppColor.red),
                                 )
                               ],
                             ),

@@ -1,5 +1,5 @@
-import '../entity/category.dart';
-import '../entity/product_entity.dart';
+import 'package:task_10_shopping_list/entity/category.dart';
+import 'package:task_10_shopping_list/entity/product_entity.dart';
 
 /// Список продуктов.
 ///

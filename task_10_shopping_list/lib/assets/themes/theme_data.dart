@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../colors/color_palette.dart';
-import '../text/text_style.dart';
+import 'package:task_10_shopping_list/assets/colors/color_palette.dart';
+import 'package:task_10_shopping_list/assets/text/text_style.dart';
 
 abstract class AppThemeData {
   static final ThemeData lightTheme = ThemeData(
