@@ -61,10 +61,7 @@ class Personal extends StatelessWidget {
             ),
           ),
           switch (model.products){
-
-            // TODO: Handle this case.
             ProductsWithoutCategory(data: final data) => SortWithoutCategoryWidget(products: data),
-            // TODO: Handle this case.
             ProductsWithCategory(productsByCategoryMap: final data) => SortCategoryWidget(products: data),
           },
           const Divider(thickness: 0.5),
