@@ -1,0 +1,1 @@
+ /Users/macbookairm1/Desktop/task_10_shopping_list/.dart_tool/flutter_build/e774ac846103eb9fbf4f6527de53cdbb/native_assets.yaml: 
