@@ -18,7 +18,7 @@ class ContainerWithTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onLongPress: onLongPress,
-      child: Container(
+      child: DecoratedBox(
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
@@ -37,21 +37,17 @@ class ContainerWithTextWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(nameColor),
-              const SizedBox(
-                width: 30,
-              ),
+              const SizedBox(width: 30),
               Row(
                 children: [
                   Text(color),
-                  const SizedBox(
-                    width: 3,
-                  ),
+                  const SizedBox(width: 3),
                   copyOn
                       ? const Icon(
-                    Icons.copy,
-                    size: 12,
-                  )
-                      : Container(),
+                          Icons.copy,
+                          size: 12,
+                        )
+                      : const SizedBox.shrink()
                 ],
               ),
             ],

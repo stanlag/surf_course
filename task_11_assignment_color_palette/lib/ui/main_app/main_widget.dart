@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_11_assignment_color_palette/my_widgets/grid_item_widget.dart';
 import 'package:task_11_assignment_color_palette/navigation_route_name/navigation_route_name.dart';
 import 'package:task_11_assignment_color_palette/resources/text.dart';
-import 'package:task_11_assignment_color_palette/model/model.dart';
+import 'package:task_11_assignment_color_palette/model/palette_utils_model.dart';
 
 class MainWidget extends StatefulWidget {
   const MainWidget({Key? key}) : super(key: key);
@@ -47,9 +47,11 @@ class _MainWidgetState extends State<MainWidget> {
             mainAxisSpacing: 30.0,
             crossAxisSpacing: 3.0,
           ),
-          itemCount: Model.listColor.length,
+          itemCount: PaletteUtilsModel.listColor.length,
           itemBuilder: (context, index) {
-            final dataColor = Model.getColorFromHex(Model.listColor[index]);
+            final dataColor = PaletteUtilsModel.getColorFromHex(
+                PaletteUtilsModel.listColor[index]);
+
             return GridItem(
               listColor: dataColor,
               color: dataColor.color,
@@ -57,7 +59,7 @@ class _MainWidgetState extends State<MainWidget> {
               copyOn: index == copyIndex,
               onLongPress: () {
                 _changeCopyIndex(index);
-                Model.copyToClipboard(dataColor.value);
+                PaletteUtilsModel.copyToClipboard(dataColor.value);
               },
               onTap: () {
                 Navigator.pushNamed(context, NavigationRouteNames.colorWidget,

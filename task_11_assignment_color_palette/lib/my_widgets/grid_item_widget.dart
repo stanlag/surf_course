@@ -12,7 +12,7 @@ class GridItem extends StatelessWidget {
     required this.index,
   });
 
-  final ListColor listColor;
+  final ColorFromThePalette listColor;
   final Color color;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
@@ -27,12 +27,14 @@ class GridItem extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(15.0),
+            child:ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: SizedBox(
+                width: 100,
+                height: 100,
+                child: ColoredBox(
+                  color: color,
+                ),
               ),
             ),
           ),
@@ -53,7 +55,7 @@ class GridItem extends StatelessWidget {
                 Icons.copy,
                 size: 12,
               )
-                  : Container(),
+                  : const SizedBox.shrink(),
             ],
           ),
         ],

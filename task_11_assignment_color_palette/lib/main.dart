@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
       theme: AppThemeData.lightTheme,
       initialRoute: NavigationRouteNames.main,
       routes: {
-        NavigationRouteNames.main: (context) => const MainWidget(),
-        NavigationRouteNames.colorWidget: (context) => const ColorWidget(),
+        NavigationRouteNames.main: (_) => const MainWidget(),
+        NavigationRouteNames.colorWidget: (_) => const ColorWidget(),
 
       },
 

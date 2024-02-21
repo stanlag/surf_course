@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_11_assignment_color_palette/model/model.dart';
+import 'package:task_11_assignment_color_palette/model/palette_utils_model.dart';
 import 'package:task_11_assignment_color_palette/entity/list_colors.dart';
 import 'package:task_11_assignment_color_palette/my_widgets/container_with_text_widget.dart';
 import 'package:task_11_assignment_color_palette/resources/text.dart';
@@ -22,7 +22,7 @@ class _ColorWidgetState extends State<ColorWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final listColor = ModalRoute.of(context)!.settings.arguments as ListColor;
+    final listColor = ModalRoute.of(context)!.settings.arguments as ColorFromThePalette;
 
     return Scaffold(
       appBar: AppBar(
@@ -47,7 +47,7 @@ class _ColorWidgetState extends State<ColorWidget> {
                   copyOn: copyIndex == 0,
                   onLongPress: () {
                     _changeCopyIndex(0);
-                    Model.copyToClipboard(listColor.value);
+                    PaletteUtilsModel.copyToClipboard(listColor.value);
                   },
                 ),
                 const SizedBox(
@@ -62,7 +62,7 @@ class _ColorWidgetState extends State<ColorWidget> {
                       copyOn: copyIndex == 1,
                       onLongPress: () {
                         _changeCopyIndex(1);
-                        Model.copyToClipboard(listColor.color.red.toString());
+                        PaletteUtilsModel.copyToClipboard(listColor.color.red.toString());
                       },
                     ),
                     ContainerWithTextWidget(
@@ -71,7 +71,7 @@ class _ColorWidgetState extends State<ColorWidget> {
                       copyOn: copyIndex == 2,
                       onLongPress: () {
                         _changeCopyIndex(2);
-                        Model.copyToClipboard(listColor.color.green.toString());
+                        PaletteUtilsModel.copyToClipboard(listColor.color.green.toString());
                       },
                     ),
                     ContainerWithTextWidget(
@@ -80,7 +80,7 @@ class _ColorWidgetState extends State<ColorWidget> {
                       copyOn: copyIndex == 3,
                       onLongPress: () {
                         _changeCopyIndex(3);
-                        Model.copyToClipboard(listColor.color.blue.toString());
+                        PaletteUtilsModel.copyToClipboard(listColor.color.blue.toString());
                       },
                     )
                   ],

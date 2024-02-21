@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ListColor {
+/// Класс описывающий цвет одной ячейки в сетку палитр
+class ColorFromThePalette {
+
   final String name;
   final String value;
   Color color = Colors.white;
 
-  ListColor(this.name, this.value);
+  ColorFromThePalette(this.name, this.value);
 
-  factory ListColor.fromJson(Map<String, dynamic> json) {
-    return ListColor(
+  factory ColorFromThePalette.fromJson(Map<String, dynamic> json) {
+    return ColorFromThePalette(
       json['name'] as String,
       json['value'] as String,
     );
