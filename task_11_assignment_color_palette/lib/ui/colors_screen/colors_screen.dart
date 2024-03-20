@@ -3,9 +3,9 @@ import 'package:task_11_assignment_color_palette/my_widgets/grid_item_widget.dar
 import 'package:task_11_assignment_color_palette/navigation_route_name/navigation_route_name.dart';
 import 'package:task_11_assignment_color_palette/resources/text.dart';
 
-import '../../domain/entity/color_entity.dart';
-import '../../mapper/color_mapper.dart';
-import '../../toast_msg/toast_msg.dart';
+import 'package:task_11_assignment_color_palette/domain/entity/color_entity.dart';
+import 'package:task_11_assignment_color_palette/mapper/color_mapper.dart';
+import 'package:task_11_assignment_color_palette/toast_msg/toast_msg.dart';
 
 class ColorsScreen extends StatefulWidget {
   const ColorsScreen({Key? key}) : super(key: key);
@@ -71,10 +71,10 @@ class _ColorsScreenState extends State<ColorsScreen> {
                   crossAxisSpacing: 3.0,
                 ),
                 itemCount: snapshot.data!.length,
-                itemBuilder: ( _ , index) {
+                itemBuilder: (_, index) {
                   final entityColor = snapshot.data![index];
                   final dataColor =
-                  ColorMapper.getColorFromHex(entityColor.value);
+                      ColorMapper.getColorFromHex(entityColor.value);
                   return GridItem(
                     colorData: entityColor,
                     color: Color(dataColor),

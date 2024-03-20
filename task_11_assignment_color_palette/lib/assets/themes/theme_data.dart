@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:task_11_assignment_color_palette/assets/colors/color_palette.dart';
 import 'package:task_11_assignment_color_palette/assets/text/text_style.dart';
 

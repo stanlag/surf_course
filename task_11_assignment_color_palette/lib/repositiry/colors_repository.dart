@@ -8,8 +8,6 @@ class ColorsRepository {
     required this.colorsApi,
     required this.colorsMapper,
   });
-
 }
 
-class ColorsApiAssets {
-}
+class ColorsApiAssets {}

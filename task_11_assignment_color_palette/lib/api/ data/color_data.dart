@@ -10,9 +10,10 @@ class ColorData {
   final String? value;
 
   ColorData(
-      this.name,
-      this.value,
-      );
+    this.name,
+    this.value,
+  );
 
-  factory ColorData.fromJson(Map<String, dynamic> json) => _$ColorDataFromJson(json);
+  factory ColorData.fromJson(Map<String, dynamic> json) =>
+      _$ColorDataFromJson(json);
 }

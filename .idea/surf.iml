@@ -21,6 +21,27 @@
       <excludeFolder url="file://$MODULE_DIR$/task-3_big_jackpot/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/task-3_big_jackpot/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/task-3_big_jackpot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/ios/.symlinks/plugins/fluttertoast/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/ios/.symlinks/plugins/fluttertoast/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/ios/.symlinks/plugins/fluttertoast/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/ios/.symlinks/plugins/fluttertoast/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/ios/.symlinks/plugins/fluttertoast/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_11_assignment_color_palette/ios/.symlinks/plugins/fluttertoast/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_6_shop_shesterochka/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_6_shop_shesterochka/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_6_shop_shesterochka/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_7_Counter_v_2/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_7_Counter_v_2/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_7_Counter_v_2/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_8_gesturemaster/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_8_gesturemaster/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_8_gesturemaster/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_9_business_card/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_9_business_card/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/task_9_business_card/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

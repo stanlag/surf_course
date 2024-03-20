@@ -1,7 +1,5 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/services.dart';
-
 import '../api/ data/color_data.dart';
 import '../domain/entity/color_entity.dart';
 
@@ -26,10 +24,9 @@ class ColorMapper {
     hexColor = hexColor.replaceAll('#', '');
     if (hexColor.length == 6) {
       hexColor = 'FF$hexColor';
-    }else{
+    } else {
       hexColor = '#FFFFFF';
     }
-      return int.parse(hexColor, radix: 16);
+    return int.parse(hexColor, radix: 16);
   }
-
 }

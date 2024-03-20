@@ -3,9 +3,9 @@ import 'package:task_11_assignment_color_palette/mapper/color_mapper.dart';
 import 'package:task_11_assignment_color_palette/my_widgets/container_with_text_widget.dart';
 import 'package:task_11_assignment_color_palette/resources/text.dart';
 import 'package:collection/collection.dart';
-import '../../domain/entity/color_entity.dart';
-import '../../domain/entity/rgb_type.dart';
-import '../../toast_msg/toast_msg.dart';
+import 'package:task_11_assignment_color_palette/domain/entity/color_entity.dart';
+import 'package:task_11_assignment_color_palette/domain/entity/rgb_type.dart';
+import 'package:task_11_assignment_color_palette/toast_msg/toast_msg.dart';
 
 class DetailedColorsScreen extends StatefulWidget {
   const DetailedColorsScreen({super.key});
