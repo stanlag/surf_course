@@ -37,7 +37,7 @@ class ContainerWithTextWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(nameColor),
-              const SizedBox(width: 30),
+              const SizedBox(width: 5),
               Row(
                 children: [
                   Text(color),

@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'package:task_11_assignment_color_palette/entity/list_colors.dart';
+import '../domain/entity/color_entity.dart';
 
 class GridItem extends StatelessWidget {
   const GridItem({super.key,
-    required this.listColor,
+    required this.colorData,
     required this.color,
     required this.onLongPress,
     required this.onTap,
-    required this.copyOn,
+    required this.isCopy,
     required this.index,
   });
 
-  final ColorFromThePalette listColor;
+  final ColorEntity colorData;
   final Color color;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
-  final bool copyOn;
+  final bool isCopy;
   final int index;
 
   @override
@@ -27,12 +27,12 @@ class GridItem extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child:ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
-              child: SizedBox(
-                width: 100,
-                height: 100,
-                child: ColoredBox(
+            child:
+            SizedBox.square(
+              dimension: 100.0,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
                   color: color,
                 ),
               ),
@@ -41,16 +41,16 @@ class GridItem extends StatelessWidget {
           const SizedBox(
             height: 4,
           ),
-          Text(listColor.name, style: Theme.of(context).textTheme.bodySmall),
+          Text(colorData.name, style: Theme.of(context).textTheme.bodySmall),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(listColor.value,
+              Text(colorData.value,
                   style: Theme.of(context).textTheme.bodySmall),
               const SizedBox(
                 width: 3,
               ),
-              copyOn
+              isCopy
                   ? const Icon(
                 Icons.copy,
                 size: 12,
