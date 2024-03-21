@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../domain/entity/color_entity.dart';
+import 'package:task_11_assignment_color_palette/domain/entity/color_entity.dart';
 
 class GridItem extends StatelessWidget {
-  const GridItem({
-    super.key,
+  const GridItem({super.key,
     required this.colorData,
     required this.color,
     required this.onLongPress,
@@ -28,7 +27,8 @@ class GridItem extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: SizedBox.square(
+            child:
+            SizedBox.square(
               dimension: 100.0,
               child: DecoratedBox(
                 decoration: BoxDecoration(
@@ -52,9 +52,9 @@ class GridItem extends StatelessWidget {
               ),
               isCopy
                   ? const Icon(
-                      Icons.copy,
-                      size: 12,
-                    )
+                Icons.copy,
+                size: 12,
+              )
                   : const SizedBox.shrink(),
             ],
           ),

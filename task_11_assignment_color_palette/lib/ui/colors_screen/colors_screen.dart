@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task_11_assignment_color_palette/my_widgets/grid_item_widget.dart';
 import 'package:task_11_assignment_color_palette/navigation_route_name/navigation_route_name.dart';
 import 'package:task_11_assignment_color_palette/resources/text.dart';
-
+import 'package:task_11_assignment_color_palette/api/color_api/color_api.dart';
 import 'package:task_11_assignment_color_palette/domain/entity/color_entity.dart';
-import 'package:task_11_assignment_color_palette/mapper/color_mapper.dart';
 import 'package:task_11_assignment_color_palette/toast_msg/toast_msg.dart';
 
 class ColorsScreen extends StatefulWidget {
@@ -24,7 +23,7 @@ class _ColorsScreenState extends State<ColorsScreen> {
   }
 
   Future<List<ColorEntity>> fetchColorData() async {
-    return await ColorMapper.colorEntityFromJson();
+    return await ColorApi.colorEntityFromJson();
   }
 
   @override
@@ -73,8 +72,7 @@ class _ColorsScreenState extends State<ColorsScreen> {
                 itemCount: snapshot.data!.length,
                 itemBuilder: (_, index) {
                   final entityColor = snapshot.data![index];
-                  final dataColor =
-                      ColorMapper.getColorFromHex(entityColor.value);
+                  final dataColor = ColorApi.getColorFromHex(entityColor.value);
                   return GridItem(
                     colorData: entityColor,
                     color: Color(dataColor),

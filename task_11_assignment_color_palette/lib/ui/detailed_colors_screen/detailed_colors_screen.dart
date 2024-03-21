@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_11_assignment_color_palette/mapper/color_mapper.dart';
 import 'package:task_11_assignment_color_palette/my_widgets/container_with_text_widget.dart';
 import 'package:task_11_assignment_color_palette/resources/text.dart';
 import 'package:collection/collection.dart';
+import 'package:task_11_assignment_color_palette/api/color_api/color_api.dart';
 import 'package:task_11_assignment_color_palette/domain/entity/color_entity.dart';
 import 'package:task_11_assignment_color_palette/domain/entity/rgb_type.dart';
 import 'package:task_11_assignment_color_palette/toast_msg/toast_msg.dart';
@@ -27,7 +27,7 @@ class _DetailedColorsScreenState extends State<DetailedColorsScreen> {
   Widget build(BuildContext context) {
     final entityColor =
         ModalRoute.of(context)!.settings.arguments as ColorEntity;
-    final color = Color(ColorMapper.getColorFromHex(entityColor.value));
+    final color = Color(ColorApi.getColorFromHex(entityColor.value));
     return Scaffold(
       appBar: AppBar(
         backgroundColor: color,
