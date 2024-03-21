@@ -241,8 +241,8 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.1.1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
               <option value="$USER_HOME$/developer/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -581,8 +581,8 @@
         <entry key="web">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.3.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.1.4-beta/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web-0.3.0/lib" />
             </list>
           </value>
         </entry>
