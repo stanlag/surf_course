@@ -6,10 +6,10 @@ import 'package:task_11_assignment_color_palette/domain/entity/color_entity.dart
 
 class ColorApi {
   /// Имитируем задержку чтобы увидеть лоадер
-  static Future<void> _addDelay(int ms) =>
+  Future<void> _addDelay(int ms) =>
       Future<void>.delayed(Duration(milliseconds: ms));
 
-  static Future<List<ColorEntity>> colorEntityFromJson() async {
+   Future<List<ColorEntity>> colorEntityFromJson() async {
     await _addDelay(1000);
     String data = await rootBundle.loadString('assets/json/package.json');
     final decoded = json.decode(data);
@@ -26,7 +26,7 @@ class ColorApi {
     return listColorEntity;
   }
 
-  static int getColorFromHex(String hexColor) {
+   int getColorFromHex(String hexColor) {
     hexColor = hexColor.replaceAll('#', '');
     if (hexColor.length == 6) {
       hexColor = 'FF$hexColor';

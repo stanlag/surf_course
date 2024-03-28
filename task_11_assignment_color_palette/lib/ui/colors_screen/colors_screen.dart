@@ -15,7 +15,7 @@ class ColorsScreen extends StatefulWidget {
 
 class _ColorsScreenState extends State<ColorsScreen> {
   int copyIndex = -1; // Индекс цвета, на который выполнен долгий таб
-
+  final ColorApi _colorApi = ColorApi();
   void _changeCopyIndex(int index) {
     setState(() {
       copyIndex = index;
@@ -23,7 +23,7 @@ class _ColorsScreenState extends State<ColorsScreen> {
   }
 
   Future<List<ColorEntity>> fetchColorData() async {
-    return await ColorApi.colorEntityFromJson();
+    return await _colorApi.colorEntityFromJson();
   }
 
   @override
@@ -72,7 +72,7 @@ class _ColorsScreenState extends State<ColorsScreen> {
                 itemCount: snapshot.data!.length,
                 itemBuilder: (_, index) {
                   final entityColor = snapshot.data![index];
-                  final dataColor = ColorApi.getColorFromHex(entityColor.value);
+                  final dataColor = _colorApi.getColorFromHex(entityColor.value);
                   return GridItem(
                     colorData: entityColor,
                     color: Color(dataColor),

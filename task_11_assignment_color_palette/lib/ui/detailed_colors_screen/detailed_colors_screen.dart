@@ -16,6 +16,7 @@ class DetailedColorsScreen extends StatefulWidget {
 
 class _DetailedColorsScreenState extends State<DetailedColorsScreen> {
   int copyIndex = -1;
+  final ColorApi _colorApi = ColorApi();
 
   void _changeCopyIndex(int index) {
     setState(() {
@@ -27,7 +28,7 @@ class _DetailedColorsScreenState extends State<DetailedColorsScreen> {
   Widget build(BuildContext context) {
     final entityColor =
         ModalRoute.of(context)!.settings.arguments as ColorEntity;
-    final color = Color(ColorApi.getColorFromHex(entityColor.value));
+    final color = Color(_colorApi.getColorFromHex(entityColor.value));
     return Scaffold(
       appBar: AppBar(
         backgroundColor: color,
